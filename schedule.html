@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ตารางเรียน</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>ตารางเรียน</h1>
+
+<button id="toggle-dark">🌙 โหมดกลางคืน</button>
+<nav>
+  <ul class="menu">
+    <li><a href="index.html">หน้าแรก</a></li>
+    <li><a href="schedule.html">ตารางเรียน</a></li>
+    <li><a href="room-usage.html">ตารางการใช้ห้อง</a></li>
+    <li><a href="calendar.html">ปฏิทินการศึกษา</a></li>
+    <li><a href="login.html">Login สำหรับอาจารย์</a></li>
+  </ul>
+</nav>
+
+  </header>
+  <main>
+
+<section class="content">
+  <h2>ตารางเรียนตัวอย่าง</h2>
+  <table>
+    <thead>
+      <tr><th>วัน / เวลา</th><th>08:00‑10:00</th><th>10:00‑12:00</th><th>13:00‑15:00</th><th>15:00‑17:00</th></tr>
+    </thead>
+    <tbody>
+      <tr><th>จ.</th><td>‑</td><td>‑</td><td>‑</td><td>‑</td></tr>
+      <tr><th>อ.</th><td>‑</td><td>‑</td><td>‑</td><td>‑</td></tr>
+      <tr><th>พ.</th><td>‑</td><td>‑</td><td>‑</td><td>‑</td></tr>
+      <tr><th>พฤ.</th><td>‑</td><td>‑</td><td>‑</td><td>‑</td></tr>
+      <tr><th>ศ.</th><td>‑</td><td>‑</td><td>‑</td><td>‑</td></tr>
+    </tbody>
+  </table>
+</section>
+
+  </main>
+  <footer>
+    <p>© 2025 ระบบทะเบียน</p>
+  </footer>
+
+<script>
+  document.getElementById('toggle-dark').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+</body>
+</html>

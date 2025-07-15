@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>บันทึกเกรดรายบุคคล</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>บันทึกเกรดรายบุคคล</h1>
+
+<button id="toggle-dark">🌙 โหมดกลางคืน</button>
+<nav>
+  <ul class="menu">
+    <li><a href="index.html">หน้าแรก</a></li>
+    <li><a href="schedule.html">ตารางเรียน</a></li>
+    <li><a href="room-usage.html">ตารางการใช้ห้อง</a></li>
+    <li><a href="calendar.html">ปฏิทินการศึกษา</a></li>
+    <li><a href="login.html">Login สำหรับอาจารย์</a></li>
+  </ul>
+</nav>
+
+  </header>
+  <main>
+
+<section class="content">
+  <h2>สถิติผลการเรียน</h2>
+  <canvas id="gradeChart" width="400" height="200"></canvas>
+</section>
+
+  </main>
+  <footer>
+    <p>© 2025 ระบบทะเบียน</p>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('gradeChart').getContext('2d');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['A', 'B+', 'B', 'C+', 'C', 'D', 'F'],
+    datasets: [{
+      label: 'จำนวน',
+      data: [5, 8, 10, 6, 4, 1, 2],
+      backgroundColor: '#3b82f6'
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false }
+    }
+  }
+});
+</script>
+
+<script>
+  document.getElementById('toggle-dark').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+</body>
+</html>
